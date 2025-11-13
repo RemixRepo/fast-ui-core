@@ -1,5 +1,4 @@
-# Create a README in packages/core/
-cat > README.md << 'EOF'
+
 # @fast-once-ui/core
 
 Optimized fork of [Once UI System](https://github.com/once-ui-system/core) with proper tree-shaking support.
