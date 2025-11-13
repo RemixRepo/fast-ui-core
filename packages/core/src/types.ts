@@ -18,6 +18,15 @@ export type StaticSpacingToken =
   | "128"
   | "160";
 
+// Particle-specific size type that allows decimals
+export type ParticleSizeToken = 
+  | StaticSpacingToken 
+  | number 
+  | `${number}` 
+  | `${number}px` 
+  | `${number}rem` 
+  | `${number}em`;
+
 export const schemes = [
   "blue",
   "aqua",

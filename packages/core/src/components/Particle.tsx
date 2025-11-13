@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { SpacingToken } from "../types";
+import { ParticleSizeToken } from "../types";
 import { DisplayProps } from "../interfaces";
 import { Flex } from ".";
 
 interface ParticleProps extends React.ComponentProps<typeof Flex> {
   density?: number;
   color?: string;
-  size?: SpacingToken;
+  size?: ParticleSizeToken;
   speed?: number;
   interactive?: boolean;
   mode?: "repel" | "attract";
@@ -55,7 +55,23 @@ const Particle = React.forwardRef<HTMLDivElement, ParticleProps>(
       let mousePosition = { x: -1000, y: -1000 };
       let animationFrameId: number;
 
-      const parsedSize = `var(--static-space-${size})`;
+      // Parse size: handle decimals, numbers, and CSS units
+      const parsedSize = (() => {
+        if (typeof size === 'number') {
+          return `${size}px`;
+        }
+        const sizeStr = String(size);
+        // If it has a unit (px, rem, em) or decimal, use as-is or add px
+        if (sizeStr.includes('px') || sizeStr.includes('rem') || sizeStr.includes('em')) {
+          return sizeStr;
+        }
+        if (sizeStr.includes('.')) {
+          return `${sizeStr}px`;
+        }
+        // Otherwise, use CSS variable (for integer tokens like "2", "4", etc.)
+        return `var(--static-space-${size})`;
+      })();
+      
       const parsedOpacity = `${opacity}%`;
       const movementSpeed = speed * 0.08;
       const repulsionStrength = 0.15 * (speed || 1);

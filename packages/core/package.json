@@ -1,6 +1,6 @@
 {
   "name": "@remixrepo/fast-ui-core",
-  "version": "1.5.2-fast.3",
+  "version": "1.5.2-fast.4",
   "description": "Framework-agnostic fork of Once UI with tree-shaking support - works in Next.js, Vite, and any React project",
   "sideEffects": [
     "*.css",
