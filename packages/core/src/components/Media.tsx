@@ -2,7 +2,7 @@
 
 import React, { CSSProperties, useState, useRef, useEffect, ReactNode } from "react";
 import { Column, Flex, Row, Skeleton } from ".";
-import Image from "next/image";
+import { Image } from "../shims";
 import classNames from "classnames";
 
 export interface MediaProps extends React.ComponentProps<typeof Flex> {

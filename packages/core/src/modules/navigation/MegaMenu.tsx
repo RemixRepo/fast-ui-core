@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect, ReactNode, useMemo, useCallback } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname } from "../../shims";
 import { Flex, Row, Column, Text, Icon, ToggleButton } from "../../";
 import styles from "./MegaMenu.module.scss";
 

@@ -1,111 +1,515 @@
 {
-  "name": "@once-ui-system/core",
-  "version": "1.5.2",
-  "description": "Once UI for Next.js NPM package",
-  "keywords": [
-    "once-ui",
-    "react",
-    "nextjs",
-    "scss",
-    "design system",
-    "design framework",
-    "nextjs design system"
+  "name": "@remixrepo/fast-ui-core",
+  "version": "1.5.2-fast.1",
+  "description": "Framework-agnostic fork of Once UI with tree-shaking support - works in Next.js, Vite, and any React project",
+  "sideEffects": [
+    "*.css",
+    "*.scss"
   ],
-  "author": "Once UI",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/once-ui-system/core.git",
-    "directory": "packages/core"
-  },
-  "bugs": {
-    "url": "https://github.com/once-ui-system/core/issues"
-  },
-  "homepage": "https://docs.once-ui.com",
-  "main": "dist/index.js",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE.md"
+  ],
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.js"
     },
-    "./components": {
-      "import": "./dist/components/index.js",
-      "require": "./dist/components/index.js"
+    "./styles": {
+      "import": "./dist/styles/index.css"
     },
-    "./components/*": {
-      "import": "./dist/components/*.js",
-      "require": "./dist/components/*.js"
+    "./styles/*": {
+      "import": "./dist/styles/*.css"
     },
-    "./contexts": {
-      "import": "./dist/contexts/index.js",
-      "require": "./dist/contexts/index.js"
+    "./shims": {
+      "types": "./dist/shims/index.d.ts",
+      "import": "./dist/shims/index.js"
     },
-    "./modules": {
-      "import": "./dist/modules/index.js",
-      "require": "./dist/modules/index.js"
+    "./Accordion": {
+      "types": "./dist/components/Accordion.d.ts",
+      "import": "./dist/components/Accordion.js"
     },
-    "./icons": {
-      "import": "./dist/icons/index.js",
-      "require": "./dist/icons/index.js"
+    "./AccordionGroup": {
+      "types": "./dist/components/AccordionGroup.d.ts",
+      "import": "./dist/components/AccordionGroup.js"
     },
-    "./types": {
-      "import": "./dist/types/index.js",
-      "require": "./dist/types/index.js"
+    "./Animation": {
+      "types": "./dist/components/Animation.d.ts",
+      "import": "./dist/components/Animation.js"
     },
-    "./interfaces": {
-      "import": "./dist/interfaces/index.js",
-      "require": "./dist/interfaces/index.js"
+    "./Arrow": {
+      "types": "./dist/components/Arrow.d.ts",
+      "import": "./dist/components/Arrow.js"
     },
-    "./css/styles.css": "./dist/css/styles.css",
-    "./css/tokens.css": "./dist/css/tokens.css",
-    "./utils": {
-      "import": "./dist/utils/index.js",
-      "require": "./dist/utils/index.js"
+    "./ArrowNavigationContext": {
+      "types": "./dist/components/ArrowNavigationContext.d.ts",
+      "import": "./dist/components/ArrowNavigationContext.js"
     },
-    "./hooks": {
-      "import": "./dist/hooks/index.js",
-      "require": "./dist/hooks/index.js"
+    "./AutoScroll": {
+      "types": "./dist/components/AutoScroll.d.ts",
+      "import": "./dist/components/AutoScroll.js"
+    },
+    "./Avatar": {
+      "types": "./dist/components/Avatar.d.ts",
+      "import": "./dist/components/Avatar.js"
+    },
+    "./AvatarGroup": {
+      "types": "./dist/components/AvatarGroup.d.ts",
+      "import": "./dist/components/AvatarGroup.js"
+    },
+    "./Background": {
+      "types": "./dist/components/Background.d.ts",
+      "import": "./dist/components/Background.js"
+    },
+    "./Badge": {
+      "types": "./dist/components/Badge.d.ts",
+      "import": "./dist/components/Badge.js"
+    },
+    "./Banner": {
+      "types": "./dist/components/Banner.d.ts",
+      "import": "./dist/components/Banner.js"
+    },
+    "./BlockQuote": {
+      "types": "./dist/components/BlockQuote.d.ts",
+      "import": "./dist/components/BlockQuote.js"
+    },
+    "./Button": {
+      "types": "./dist/components/Button.d.ts",
+      "import": "./dist/components/Button.js"
+    },
+    "./Card": {
+      "types": "./dist/components/Card.d.ts",
+      "import": "./dist/components/Card.js"
+    },
+    "./Carousel": {
+      "types": "./dist/components/Carousel.d.ts",
+      "import": "./dist/components/Carousel.js"
+    },
+    "./Checkbox": {
+      "types": "./dist/components/Checkbox.d.ts",
+      "import": "./dist/components/Checkbox.js"
+    },
+    "./Chip": {
+      "types": "./dist/components/Chip.d.ts",
+      "import": "./dist/components/Chip.js"
+    },
+    "./ClientFlex": {
+      "types": "./dist/components/ClientFlex.d.ts",
+      "import": "./dist/components/ClientFlex.js"
+    },
+    "./ClientGrid": {
+      "types": "./dist/components/ClientGrid.d.ts",
+      "import": "./dist/components/ClientGrid.js"
+    },
+    "./ColorInput": {
+      "types": "./dist/components/ColorInput.d.ts",
+      "import": "./dist/components/ColorInput.js"
+    },
+    "./Column": {
+      "types": "./dist/components/Column.d.ts",
+      "import": "./dist/components/Column.js"
+    },
+    "./CompareImage": {
+      "types": "./dist/components/CompareImage.d.ts",
+      "import": "./dist/components/CompareImage.js"
+    },
+    "./ContextMenu": {
+      "types": "./dist/components/ContextMenu.d.ts",
+      "import": "./dist/components/ContextMenu.js"
+    },
+    "./CountFx": {
+      "types": "./dist/components/CountFx.d.ts",
+      "import": "./dist/components/CountFx.js"
+    },
+    "./CountdownFx": {
+      "types": "./dist/components/CountdownFx.d.ts",
+      "import": "./dist/components/CountdownFx.js"
+    },
+    "./Cursor": {
+      "types": "./dist/components/Cursor.d.ts",
+      "import": "./dist/components/Cursor.js"
+    },
+    "./CursorCard": {
+      "types": "./dist/components/CursorCard.d.ts",
+      "import": "./dist/components/CursorCard.js"
+    },
+    "./DateInput": {
+      "types": "./dist/components/DateInput.d.ts",
+      "import": "./dist/components/DateInput.js"
+    },
+    "./DatePicker": {
+      "types": "./dist/components/DatePicker.d.ts",
+      "import": "./dist/components/DatePicker.js"
+    },
+    "./DateRangeInput": {
+      "types": "./dist/components/DateRangeInput.d.ts",
+      "import": "./dist/components/DateRangeInput.js"
+    },
+    "./DateRangePicker": {
+      "types": "./dist/components/DateRangePicker.d.ts",
+      "import": "./dist/components/DateRangePicker.js"
+    },
+    "./Dialog": {
+      "types": "./dist/components/Dialog.d.ts",
+      "import": "./dist/components/Dialog.js"
+    },
+    "./Dropdown": {
+      "types": "./dist/components/Dropdown.d.ts",
+      "import": "./dist/components/Dropdown.js"
+    },
+    "./DropdownWrapper": {
+      "types": "./dist/components/DropdownWrapper.d.ts",
+      "import": "./dist/components/DropdownWrapper.js"
+    },
+    "./ElementType": {
+      "types": "./dist/components/ElementType.d.ts",
+      "import": "./dist/components/ElementType.js"
+    },
+    "./EmojiPicker": {
+      "types": "./dist/components/EmojiPicker.d.ts",
+      "import": "./dist/components/EmojiPicker.js"
+    },
+    "./EmojiPickerDropdown": {
+      "types": "./dist/components/EmojiPickerDropdown.d.ts",
+      "import": "./dist/components/EmojiPickerDropdown.js"
+    },
+    "./Fade": {
+      "types": "./dist/components/Fade.d.ts",
+      "import": "./dist/components/Fade.js"
+    },
+    "./Feedback": {
+      "types": "./dist/components/Feedback.d.ts",
+      "import": "./dist/components/Feedback.js"
+    },
+    "./Flex": {
+      "types": "./dist/components/Flex.d.ts",
+      "import": "./dist/components/Flex.js"
+    },
+    "./FlipFx": {
+      "types": "./dist/components/FlipFx.d.ts",
+      "import": "./dist/components/FlipFx.js"
+    },
+    "./FocusTrap": {
+      "types": "./dist/components/FocusTrap.d.ts",
+      "import": "./dist/components/FocusTrap.js"
+    },
+    "./GlitchFx": {
+      "types": "./dist/components/GlitchFx.d.ts",
+      "import": "./dist/components/GlitchFx.js"
+    },
+    "./Grid": {
+      "types": "./dist/components/Grid.d.ts",
+      "import": "./dist/components/Grid.js"
+    },
+    "./Heading": {
+      "types": "./dist/components/Heading.d.ts",
+      "import": "./dist/components/Heading.js"
+    },
+    "./HoloFx": {
+      "types": "./dist/components/HoloFx.d.ts",
+      "import": "./dist/components/HoloFx.js"
+    },
+    "./Hover": {
+      "types": "./dist/components/Hover.d.ts",
+      "import": "./dist/components/Hover.js"
+    },
+    "./HoverCard": {
+      "types": "./dist/components/HoverCard.d.ts",
+      "import": "./dist/components/HoverCard.js"
+    },
+    "./Icon": {
+      "types": "./dist/components/Icon.d.ts",
+      "import": "./dist/components/Icon.js"
+    },
+    "./IconButton": {
+      "types": "./dist/components/IconButton.d.ts",
+      "import": "./dist/components/IconButton.js"
+    },
+    "./InfiniteScroll": {
+      "types": "./dist/components/InfiniteScroll.d.ts",
+      "import": "./dist/components/InfiniteScroll.js"
+    },
+    "./InlineCode": {
+      "types": "./dist/components/InlineCode.d.ts",
+      "import": "./dist/components/InlineCode.js"
+    },
+    "./Input": {
+      "types": "./dist/components/Input.d.ts",
+      "import": "./dist/components/Input.js"
+    },
+    "./InteractiveDetails": {
+      "types": "./dist/components/InteractiveDetails.d.ts",
+      "import": "./dist/components/InteractiveDetails.js"
+    },
+    "./Kbd": {
+      "types": "./dist/components/Kbd.d.ts",
+      "import": "./dist/components/Kbd.js"
+    },
+    "./LetterFx": {
+      "types": "./dist/components/LetterFx.d.ts",
+      "import": "./dist/components/LetterFx.js"
+    },
+    "./Line": {
+      "types": "./dist/components/Line.d.ts",
+      "import": "./dist/components/Line.js"
+    },
+    "./List": {
+      "types": "./dist/components/List.d.ts",
+      "import": "./dist/components/List.js"
+    },
+    "./ListItem": {
+      "types": "./dist/components/ListItem.d.ts",
+      "import": "./dist/components/ListItem.js"
+    },
+    "./Logo": {
+      "types": "./dist/components/Logo.d.ts",
+      "import": "./dist/components/Logo.js"
+    },
+    "./LogoCloud": {
+      "types": "./dist/components/LogoCloud.d.ts",
+      "import": "./dist/components/LogoCloud.js"
+    },
+    "./Mask": {
+      "types": "./dist/components/Mask.d.ts",
+      "import": "./dist/components/Mask.js"
+    },
+    "./MasonryGrid": {
+      "types": "./dist/components/MasonryGrid.d.ts",
+      "import": "./dist/components/MasonryGrid.js"
+    },
+    "./MatrixFx": {
+      "types": "./dist/components/MatrixFx.d.ts",
+      "import": "./dist/components/MatrixFx.js"
+    },
+    "./Media": {
+      "types": "./dist/components/Media.d.ts",
+      "import": "./dist/components/Media.js"
+    },
+    "./NavIcon": {
+      "types": "./dist/components/NavIcon.d.ts",
+      "import": "./dist/components/NavIcon.js"
+    },
+    "./NumberInput": {
+      "types": "./dist/components/NumberInput.d.ts",
+      "import": "./dist/components/NumberInput.js"
+    },
+    "./OTPInput": {
+      "types": "./dist/components/OTPInput.d.ts",
+      "import": "./dist/components/OTPInput.js"
+    },
+    "./OgCard": {
+      "types": "./dist/components/OgCard.d.ts",
+      "import": "./dist/components/OgCard.js"
+    },
+    "./Option": {
+      "types": "./dist/components/Option.d.ts",
+      "import": "./dist/components/Option.js"
+    },
+    "./Particle": {
+      "types": "./dist/components/Particle.d.ts",
+      "import": "./dist/components/Particle.js"
+    },
+    "./PasswordInput": {
+      "types": "./dist/components/PasswordInput.d.ts",
+      "import": "./dist/components/PasswordInput.js"
+    },
+    "./ProgressBar": {
+      "types": "./dist/components/ProgressBar.d.ts",
+      "import": "./dist/components/ProgressBar.js"
+    },
+    "./Pulse": {
+      "types": "./dist/components/Pulse.d.ts",
+      "import": "./dist/components/Pulse.js"
+    },
+    "./RadioButton": {
+      "types": "./dist/components/RadioButton.d.ts",
+      "import": "./dist/components/RadioButton.js"
+    },
+    "./RevealFx": {
+      "types": "./dist/components/RevealFx.d.ts",
+      "import": "./dist/components/RevealFx.js"
+    },
+    "./Row": {
+      "types": "./dist/components/Row.d.ts",
+      "import": "./dist/components/Row.js"
+    },
+    "./ScrollToTop": {
+      "types": "./dist/components/ScrollToTop.d.ts",
+      "import": "./dist/components/ScrollToTop.js"
+    },
+    "./Scroller": {
+      "types": "./dist/components/Scroller.d.ts",
+      "import": "./dist/components/Scroller.js"
+    },
+    "./SegmentedControl": {
+      "types": "./dist/components/SegmentedControl.d.ts",
+      "import": "./dist/components/SegmentedControl.js"
+    },
+    "./Select": {
+      "types": "./dist/components/Select.d.ts",
+      "import": "./dist/components/Select.js"
+    },
+    "./ServerFlex": {
+      "types": "./dist/components/ServerFlex.d.ts",
+      "import": "./dist/components/ServerFlex.js"
+    },
+    "./ServerGrid": {
+      "types": "./dist/components/ServerGrid.d.ts",
+      "import": "./dist/components/ServerGrid.js"
+    },
+    "./ShineFx": {
+      "types": "./dist/components/ShineFx.d.ts",
+      "import": "./dist/components/ShineFx.js"
+    },
+    "./Skeleton": {
+      "types": "./dist/components/Skeleton.d.ts",
+      "import": "./dist/components/Skeleton.js"
+    },
+    "./SmartLink": {
+      "types": "./dist/components/SmartLink.d.ts",
+      "import": "./dist/components/SmartLink.js"
+    },
+    "./Spinner": {
+      "types": "./dist/components/Spinner.d.ts",
+      "import": "./dist/components/Spinner.js"
+    },
+    "./StatusIndicator": {
+      "types": "./dist/components/StatusIndicator.d.ts",
+      "import": "./dist/components/StatusIndicator.js"
+    },
+    "./StyleOverlay": {
+      "types": "./dist/components/StyleOverlay.d.ts",
+      "import": "./dist/components/StyleOverlay.js"
+    },
+    "./StylePanel": {
+      "types": "./dist/components/StylePanel.d.ts",
+      "import": "./dist/components/StylePanel.js"
+    },
+    "./Swiper": {
+      "types": "./dist/components/Swiper.d.ts",
+      "import": "./dist/components/Swiper.js"
+    },
+    "./Switch": {
+      "types": "./dist/components/Switch.d.ts",
+      "import": "./dist/components/Switch.js"
+    },
+    "./Table": {
+      "types": "./dist/components/Table.d.ts",
+      "import": "./dist/components/Table.js"
+    },
+    "./Tag": {
+      "types": "./dist/components/Tag.d.ts",
+      "import": "./dist/components/Tag.js"
+    },
+    "./TagInput": {
+      "types": "./dist/components/TagInput.d.ts",
+      "import": "./dist/components/TagInput.js"
+    },
+    "./Text": {
+      "types": "./dist/components/Text.d.ts",
+      "import": "./dist/components/Text.js"
+    },
+    "./Textarea": {
+      "types": "./dist/components/Textarea.d.ts",
+      "import": "./dist/components/Textarea.js"
+    },
+    "./ThemeSwitcher": {
+      "types": "./dist/components/ThemeSwitcher.d.ts",
+      "import": "./dist/components/ThemeSwitcher.js"
+    },
+    "./TiltFx": {
+      "types": "./dist/components/TiltFx.d.ts",
+      "import": "./dist/components/TiltFx.js"
+    },
+    "./Timeline": {
+      "types": "./dist/components/Timeline.d.ts",
+      "import": "./dist/components/Timeline.js"
+    },
+    "./Toast": {
+      "types": "./dist/components/Toast.d.ts",
+      "import": "./dist/components/Toast.js"
+    },
+    "./Toaster": {
+      "types": "./dist/components/Toaster.d.ts",
+      "import": "./dist/components/Toaster.js"
+    },
+    "./ToggleButton": {
+      "types": "./dist/components/ToggleButton.d.ts",
+      "import": "./dist/components/ToggleButton.js"
+    },
+    "./Tooltip": {
+      "types": "./dist/components/Tooltip.d.ts",
+      "import": "./dist/components/Tooltip.js"
+    },
+    "./TypeFx": {
+      "types": "./dist/components/TypeFx.d.ts",
+      "import": "./dist/components/TypeFx.js"
+    },
+    "./User": {
+      "types": "./dist/components/User.d.ts",
+      "import": "./dist/components/User.js"
+    },
+    "./UserMenu": {
+      "types": "./dist/components/UserMenu.d.ts",
+      "import": "./dist/components/UserMenu.js"
+    },
+    "./WeatherFx": {
+      "types": "./dist/components/WeatherFx.d.ts",
+      "import": "./dist/components/WeatherFx.js"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RemixRepo/fast-ui-core.git",
+    "directory": "packages/core"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "design-system",
+    "tree-shaking",
+    "optimized",
+    "vite",
+    "nextjs",
+    "framework-agnostic",
+    "once-ui",
+    "remix"
+  ],
+  "author": "RemixRepo (fork of Once UI System)",
+  "license": "MIT",
   "scripts": {
-    "build": "pnpm clean && pnpm generate-emoji-data && tsc --project tsconfig.build.json && pnpm copy-files && pnpm build:css",
-    "build:css": "sass src/styles/index.scss:dist/css/styles.css src/tokens/index.scss:dist/css/tokens.css --style=compressed",
-    "copy-files": "node scripts/copy-files.js",
-    "clean": "rimraf dist",
-    "prepare": "pnpm build",
-    "lint": "biome check .",
-    "format": "biome format --write .",
-    "typecheck": "tsc --noEmit",
-    "dev": "tsc --watch --preserveWatchOutput",
-    "prepack": "pnpm build",
-    "generate-emoji-data": "node scripts/generate-emoji-data.js"
+    "build": "tsc -p tsconfig.build.json && npm run copy-styles",
+    "copy-styles": "node scripts/copy-files.js",
+    "dev": "tsc -p tsconfig.build.json --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    }
   },
   "dependencies": {
-    "@floating-ui/react-dom": "^2.1.1",
+    "@floating-ui/react-dom": "^2.1.2",
     "classnames": "^2.5.1",
     "compressorjs": "^1.2.1",
     "date-fns": "^4.1.0",
-    "prismjs": "^1.30.0",
-    "react-icons": "^5.2.1",
-    "recharts": "^2.15.1"
+    "framer-motion": "^11.11.17",
+    "recharts": "^2.14.1"
   },
-  "peerDependencies": {
-    "next": ">=13.4",
-    "react": ">=18",
-    "react-dom": ">=18",
-    "sass": "^1.77.6",
-    "sharp": "^0.33.4"
+  "bugs": {
+    "url": "https://github.com/RemixRepo/fast-ui-core/issues"
   },
-  "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@types/node": "20.17.23",
-    "@types/react": "19.0.1",
-    "@types/react-dom": "19.0.2",
-    "rimraf": "^5.0.10",
-    "typescript": "5.8.2"
-  },
-  "overrides": {
-    "@types/react": "19.0.1",
-    "@types/react-dom": "19.0.2"
-  }
+  "homepage": "https://github.com/RemixRepo/fast-ui-core#readme"
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Link from "next/link";
+import { Link } from "../shims";
 import classNames from "classnames";
 import { SpacingToken } from "../types";
 import { Flex, ContextMenu, Option, Icon, Column, Line } from ".";

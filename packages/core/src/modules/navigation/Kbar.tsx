@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo, ReactNode } from "react";
 import { Flex, Text, Icon, Column, Input, Option, Row, Kbd, ArrowNavigation, useArrowNavigationContext } from "../../";
 import { createPortal } from "react-dom";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname } from "../../shims";
 import styles from "./Kbar.module.scss";
 
 export interface KbarItem {

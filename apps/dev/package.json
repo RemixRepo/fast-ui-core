@@ -1,5 +1,5 @@
 {
-  "name": "@once-ui-system/dev",
+  "name": "@remixrepo/fast-ui-dev",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -12,7 +12,7 @@
     "watch": "tsc --watch --project tsconfig.build.json"
   },
   "dependencies": {
-    "@once-ui-system/core": "workspace:*",
+    "@remixrepo/fast-ui-core": "workspace:*",
     "classnames": "^2.5.1",
     "next": "15.5.4",
     "react": "^19.0.0",
