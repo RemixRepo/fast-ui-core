@@ -1,6 +1,6 @@
 {
   "name": "@remixrepo/fast-ui-core",
-  "version": "1.5.2-fast.1",
+  "version": "1.5.2-fast.3",
   "description": "Framework-agnostic fork of Once UI with tree-shaking support - works in Next.js, Vite, and any React project",
   "sideEffects": [
     "*.css",
@@ -21,11 +21,68 @@
       "import": "./dist/index.js",
       "require": "./dist/index.js"
     },
+    "./css/styles.css": {
+      "import": "./dist/css/styles.css"
+    },
+    "./css/tokens.css": {
+      "import": "./dist/css/tokens.css"
+    },
     "./styles": {
-      "import": "./dist/styles/index.css"
+      "import": "./dist/styles/index.scss"
     },
     "./styles/*": {
-      "import": "./dist/styles/*.css"
+      "import": "./dist/styles/*.scss"
+    },
+    "./styles/index.scss": {
+      "import": "./dist/styles/index.scss"
+    },
+    "./styles/breakpoints.scss": {
+      "import": "./dist/styles/breakpoints.scss"
+    },
+    "./styles/spacing.scss": {
+      "import": "./dist/styles/spacing.scss"
+    },
+    "./styles/border.scss": {
+      "import": "./dist/styles/border.scss"
+    },
+    "./styles/color.scss": {
+      "import": "./dist/styles/color.scss"
+    },
+    "./styles/background.scss": {
+      "import": "./dist/styles/background.scss"
+    },
+    "./styles/typography.scss": {
+      "import": "./dist/styles/typography.scss"
+    },
+    "./styles/global.scss": {
+      "import": "./dist/styles/global.scss"
+    },
+    "./styles/shadow.scss": {
+      "import": "./dist/styles/shadow.scss"
+    },
+    "./styles/size.scss": {
+      "import": "./dist/styles/size.scss"
+    },
+    "./styles/display.scss": {
+      "import": "./dist/styles/display.scss"
+    },
+    "./styles/position.scss": {
+      "import": "./dist/styles/position.scss"
+    },
+    "./styles/grid.scss": {
+      "import": "./dist/styles/grid.scss"
+    },
+    "./styles/flex.scss": {
+      "import": "./dist/styles/flex.scss"
+    },
+    "./styles/utilities.scss": {
+      "import": "./dist/styles/utilities.scss"
+    },
+    "./tokens": {
+      "import": "./dist/tokens/index.scss"
+    },
+    "./tokens/*": {
+      "import": "./dist/tokens/*.scss"
     },
     "./shims": {
       "types": "./dist/shims/index.d.ts",
@@ -485,15 +542,21 @@
   "author": "RemixRepo (fork of Once UI System)",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json && npm run copy-styles",
+    "build": "tsc -p tsconfig.build.json && npm run compile-css && npm run copy-styles",
+    "compile-css": "node scripts/compile-css.js",
     "copy-styles": "node scripts/copy-files.js",
     "dev": "tsc -p tsconfig.build.json --watch",
     "clean": "rm -rf dist",
     "prepublishOnly": "npm run clean && npm run build"
   },
   "peerDependencies": {
-    "react": "^18.0.0 || ^19.0.0",
-    "react-dom": "^18.0.0 || ^19.0.0"
+    "react": ">=18",
+    "react-dom": ">=18",
+    "react-icons": "^5.0.0",
+    "prismjs": "^1.0.0",
+    "recharts": "^2.0.0",
+    "framer-motion": "^11.0.0",
+    "date-fns": "^4.0.0"
   },
   "peerDependenciesMeta": {
     "next": {
@@ -503,10 +566,10 @@
   "dependencies": {
     "@floating-ui/react-dom": "^2.1.2",
     "classnames": "^2.5.1",
-    "compressorjs": "^1.2.1",
-    "date-fns": "^4.1.0",
-    "framer-motion": "^11.11.17",
-    "recharts": "^2.14.1"
+    "compressorjs": "^1.2.1"
+  },
+  "devDependencies": {
+    "sass": "^1.80.7"
   },
   "bugs": {
     "url": "https://github.com/RemixRepo/fast-ui-core/issues"
