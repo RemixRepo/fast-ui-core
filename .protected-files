@@ -1,0 +1,38 @@
+# Protected Files - Custom fast-ui-core Modifications
+# These files must be carefully reviewed during upstream merges
+# to preserve framework-agnostic features
+
+# Shims (Critical - Never auto-merge)
+packages/core/src/shims/Link.tsx
+packages/core/src/shims/Image.tsx
+packages/core/src/shims/Script.tsx
+packages/core/src/shims/navigation.ts
+packages/core/src/shims/index.ts
+
+# Main exports (Critical)
+packages/core/src/index.ts
+
+# Configuration (Critical)
+packages/core/package.json
+packages/core/tsconfig.build.json
+packages/core/tsconfig.json
+
+# Build scripts (Critical)
+packages/core/scripts/update-exports.js
+packages/core/scripts/copy-files.js
+
+# Components using shims (High Priority)
+packages/core/src/components/Logo/Logo.tsx
+packages/core/src/components/Media/Media.tsx
+packages/core/src/components/ElementType/ElementType.tsx
+
+# Modules using shims (High Priority)
+packages/core/src/modules/Schema/Schema.tsx
+packages/core/src/modules/Kbar/Kbar.tsx
+packages/core/src/modules/MegaMenu/MegaMenu.tsx
+
+# Documentation (Medium Priority)
+packages/core/README.md
+VITE_USAGE.md
+MIGRATION_SUMMARY.md
+UPSTREAM_SYNC.md
